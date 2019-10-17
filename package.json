@@ -1,0 +1,11 @@
+{
+  "name": "static-site-starter",
+  "version": "1.0.0",
+  "description": "Get up and running with a static site quickly, including SASS compiling and browser sync for easier dev, using Gulp version 4+",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "scott Herrington",
+  "license": "MIT"
+}
