@@ -1,0 +1,27 @@
+// Typography
+@import url("https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,500,600,700");
+// font-family: "IBM Plex Sans", sans-serif;
+
+$light: 400;
+$regular: 500;
+$semiBold: 600;
+$bold: 700;
+
+// Colours
+$tint: darkBlue;
+$primary: lightBlue;
+
+$grey1: hsla(240, 2, 57, 1);
+$grey2: hsla(240, 3, 69, 1);
+$grey3: hsla(240, 5, 79, 1);
+$grey4: hsla(240, 6, 83, 1);
+$grey5: hsla(240, 11, 91, 1);
+$grey6: hsla(240, 24, 96, 1);
+
+$separator: hsla(240, 6, 25, 0.3);
+
+$background: $grey6;
+
+$primaryText: hsla(0, 0, 0, 1);
+$secondaryText: hsla(240, 6, 25, 0.6);
+$tertiaryText: hsla(240, 6, 25, 0.3);
