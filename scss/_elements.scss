@@ -12,70 +12,142 @@ body {
 }
 
 h1 {
-  margin: 0;
-  margin-bottom: 1.5rem;
   font-size: 2rem; // 32px
   line-height: 2.5rem; // 40px
+  margin: 0;
+  margin-bottom: 1.5rem;
   font-weight: $bold;
-  @media (min-width: 768px) {
-    font-size: 3rem; // 48px
+  @media (min-width: 640px) {
+    font-size: 3rem; // 48px (1.5x smallest)
     line-height: 3.5rem; // 56px
   }
   @media (min-width: 1024px) {
-    font-size: 4rem; // 64px
+    font-size: 4rem; // 64px (2 x smallest)
     line-height: 4.5rem; // 72px
   }
 }
 
 h2 {
-  font-size: 1.5rem;
-  line-height: 2rem;
-  font-weight: $semiBold;
+  font-size: 1.5rem; // 24px
+  line-height: 2rem; // 32px
+  font-weight: $bold;
   margin: 0;
   margin-bottom: 1rem;
+  @media (min-width: 640px) {
+    font-size: 2.25rem; // 36px (1.5x smallest)
+    line-height: 3rem; // 56px
+  }
   @media (min-width: 1024px) {
-    font-size: 3rem; // 48px
+    font-size: 3rem; // 48px (2*smallest)
     line-height: 4.5rem; // 64px
   }
 }
 
 h3 {
-  font-size: 1rem;
-  line-height: 1.5rem;
+  font-size: 1.25rem; // 20px
+  line-height: 1.5rem; // 32px
   font-weight: $semiBold;
   margin: 0;
   margin-bottom: 1rem;
+  @media (min-width: 640px) {
+    font-size: 1.875rem; // 30px (1.5x smallest)
+    line-height: 2.5rem; // 40px
+  }
+  @media (min-width: 1024px) {
+    font-size: 2.25rem; // 36px (2*smallest)
+    line-height: 3rem; // 48px
+  }
 }
 
 h4 {
   font-size: 1rem;
-  line-height: 1.5rem;
+  line-height: 1.5rem; // 24px
+  font-weight: $bold;
+  margin: 0;
+  margin-bottom: 1rem;
+  max-width: 64ch;
+  @media (min-width: 640px) {
+    font-size: 1.25rem; // 30px (1.5x smallest)
+    line-height: 2rem; // 40px
+    font-weight: $semiBold;
+  }
+  @media (min-width: 1024px) {
+    font-size: 1.5rem; // 18px
+    line-height: 2rem; // 24px
+  }
+}
+
+p,
+input,
+button,
+label {
+  font-size: 1rem;
+  line-height: 1.5rem; // 24px
   font-weight: $regular;
   margin: 0;
   margin-bottom: 1rem;
-}
-
-p {
-  font-size: 1rem;
-  line-height: 1.5rem;
-  font-weight: $regular;
-  margin: 0;
-  margin-bottom: 16px;
   max-width: 64ch;
+  @media (min-width: 640px) {
+    font-size: 1.25rem; // 30px (1.5x smallest)
+    line-height: 2rem; // 40px
+    font-weight: $light;
+  }
+  @media (min-width: 1024px) {
+    font-size: 1.5rem; // 18px
+    line-height: 2rem; // 24px
+  }
 }
 
 label {
-  font-size: 1rem;
-  line-height: 1.5rem;
+  font-weight: $semiBold;
+  color: $secondaryText;
+}
+
+input,
+button {
+  border-radius: 0.25rem;
+  border: 0;
+  font-weight: $semiBold;
+  padding: 0 1rem;
+  height: 3rem;
+  @media (min-width: 640px) {
+  }
+  @media (min-width: 1024px) {
+    height: 3.5rem;
+  }
 }
 
 input[type="text"] {
-  padding: 0.5rem 1rem;
-  line-height: 1.5rem;
-  border-radius: 0.25rem;
-  font-size: 1rem;
-  font-weight: $regular;
-  border: 0;
+  width: 100%;
+  max-width: 20ch;
+  background-color: $grey4;
+}
+
+button {
+  &.--primary {
+    background-color: $tint;
+    color: white;
+  }
+}
+
+a:hover,
+button:hover {
+  background-color: lighten($tint, $amount: 10%);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  label {
+    margin-bottom: 0;
+  }
+  input[type="text"] {
+    background-color: white;
+    border: 1px solid $grey4;
+  }
+  button {
+    align-self: flex-start;
+  }
 }
 
 ol {
@@ -88,9 +160,9 @@ ol {
   }
 }
 
-label {
-  font-size: 1rem;
-  line-height: 1.5rem;
-  margin: 0;
-  font-weight: $semiBold;
+// Neded when combining
+.fontAwesome {
+  font-family: "Font Awesome 5 Free", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol";
 }
